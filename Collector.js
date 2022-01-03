@@ -28,11 +28,12 @@ class Args {
 	}
 
 	getNextArg = () => {
-		this.index++;
 		if(!this.hasMore()) {
 			throw new Error("There are not enough arguments");
 		}
-		return this.#args[this.index];
+		let argToReturn = this.#args[this.index];
+		this.index++;
+		return argToReturn;
 	}
 
 	argsIsBlank = () => {
@@ -162,12 +163,15 @@ if(args.argsIsBlank()) {
 }
 
 while(args.hasMore()){
-	if(args.getNextArg() == "new:block") {
+	let commandArg = args.getNextArg();
+	if(commandArg == "new:block") {
 		Block.newBlock(args.getNextArg());
-	} else if(args.getNextArg() == "new:page") {
+	} else if(commandArg == "new:page") {
 		Page.newPage(args.getNextArg());
-	} else if(args.getNextArg() == "new:template") {
+	} else if(commandArg == "new:template") {
 		Template.newTemplate(args.getNextArg());
+	} else {
+		throw new Error("Unknown command");
 	}
 }
 
