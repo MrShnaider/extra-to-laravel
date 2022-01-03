@@ -1,0 +1,6 @@
+{
+	// Path to php.exe for validating code
+	"php.validate.executablePath": "",
+	// Ignore warnings about empty scss rules
+	"scss.lint.emptyRules": "ignore",
+}
