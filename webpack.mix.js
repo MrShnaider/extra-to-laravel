@@ -37,8 +37,8 @@ let Pages = {
 		}
 	},
 	handleAll = () => {
-		this.handleStyles();
-		this.handleTypeScript();
+		Pages.handleStyles();
+		Pages.handleTypeScript();
 	}
 }
 
@@ -56,8 +56,8 @@ let Templates = {
 		}
 	},
 	handleAll = () => {
-		this.handleStyles();
-		this.handleTypeScript();
+		Pages.handleStyles();
+		Pages.handleTypeScript();
 	}
 }
 
