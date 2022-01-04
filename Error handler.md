@@ -1,0 +1,6 @@
+- 'mix' is not recognized as an internal or external command
+	- npm install laravel-mix@latest --save-dev
+	- :
+		- npm cache clean --force
+		- npm install
+		- npm audit fix
