@@ -56,8 +56,8 @@ let Templates = {
 		}
 	},
 	handleAll = () => {
-		Pages.handleStyles();
-		Pages.handleTypeScript();
+		Templates.handleStyles();
+		Templates.handleTypeScript();
 	}
 }
 
