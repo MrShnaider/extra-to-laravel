@@ -1,6 +1,13 @@
 {
 	// Path to php.exe for validating code
 	"php.validate.executablePath": "",
+	"php.executablePath": "",
 	// Ignore warnings about empty scss rules
 	"scss.lint.emptyRules": "ignore",
+	// use with "PHP Extension Pack" in particular "PHP IntelliSense"
+	"php.suggest.basic": false,
+	// font
+	"editor.fontLigatures": true,
+	// if you don't like git highlighting in vscode
+	"git.decorations.enabled": false,
 }
