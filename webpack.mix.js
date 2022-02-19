@@ -24,38 +24,38 @@ function getFiles(dir, _extension, files_ = []){
 };
 
 let Pages = {
-	handleTypeScript = () => {
+	handleTypeScript : () => {
 		for(item of getFiles("resources/views/pages", ".ts")) {
 			let itemName = item.split("/");
 			mix.ts(item, "public/scripts/" + itemName[itemName.length - 1].split(".")[0]+".js");
 		}
 	},
-	handleStyles = () => {
+	handleStyles : () => {
 		for(item of getFiles("resources/views/pages", ".scss")) {
 			let itemName = item.split("/");
 			mix.sass(item, "public/styles/");
 		}
 	},
-	handleAll = () => {
+	handleAll : () => {
 		Pages.handleStyles();
 		Pages.handleTypeScript();
 	}
 }
 
 let Templates = {
-	handleTypeScript = () => {
+	handleTypeScript : () => {
 		for(item of getFiles("resources/views/templates", ".ts")) {
 			let itemName = item.split("/");
 			mix.ts(item, "public/scripts/" + itemName[itemName.length - 1].split(".")[0]+".js");
 		}
 	},
-	handleStyles = () => {
+	handleStyles : () => {
 		for(item of getFiles("resources/views/templates", ".scss")) {
 			let itemName = item.split("/");
 			mix.sass(item, "public/styles/");
 		}
 	},
-	handleAll = () => {
+	handleAll : () => {
 		Templates.handleStyles();
 		Templates.handleTypeScript();
 	}

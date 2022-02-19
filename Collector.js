@@ -155,6 +155,13 @@ function camelize(str = "") {
 	return capital.join("");
 }
 
+function kebabToCamel(str = "") {
+	let resultString = str.split("-")
+		.map(item => item.charAt(0).toUpperCase() + item.slice(1).toLowerCase())
+		.join("");
+	return resultString;
+}
+
 // main
 
 if(args.argsIsBlank()) {
